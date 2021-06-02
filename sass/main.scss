@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
