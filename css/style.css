@@ -22,6 +22,7 @@ header {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 .header__logo img {
@@ -75,15 +76,75 @@ a {
 }
 
 .fonctionnement {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 35% 1fr;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.fonctionnement h2 {
+  grid-column-start: 2;
+  text-align: center;
+  margin: 50px 0 35px 0;
 }
 .fonctionnement__item {
+  grid-column-start: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 5px 5px 12px 1px #a1a1a1;
+  margin: 15px 0;
+  padding: 25px 15px;
+  position: relative;
+}
+.fonctionnement__item span {
+  color: white;
+  border-radius: 100%;
+  background-color: #9356DC;
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  padding: 3px;
+  left: -2%;
+  top: 30%;
+}
+.fonctionnement__item i {
+  color: #7e7e7e;
+  padding: 0 25px;
+  font-size: 1.2rem;
+}
+.fonctionnement__item:hover {
+  background-color: #f5edff;
+}
+.fonctionnement__item:hover i {
+  color: #9356DC;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+}
+.restaurants h2 {
+  text-align: center;
+  padding: 50px 0 25px 0;
+}
+
+.grid-restaurant {
+  display: grid;
+  grid-template-columns: 1fr 45% 45% 1fr;
+  column-gap: 30px;
+}
+.grid-restaurant article img {
+  max-height: 250px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+#left {
+  grid-column-start: 2;
 }
 
 /*# sourceMappingURL=style.css.map */
