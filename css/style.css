@@ -125,6 +125,7 @@ a {
 
 .restaurants {
   background-color: #f6f6f6;
+  padding-bottom: 60px;
 }
 .restaurants h2 {
   text-align: center;
@@ -135,6 +136,7 @@ a {
   display: grid;
   grid-template-columns: 1fr 45% 45% 1fr;
   column-gap: 30px;
+  row-gap: 30px;
 }
 .grid-restaurant article img {
   max-height: 250px;
@@ -143,8 +145,84 @@ a {
   border-top-right-radius: 20px;
 }
 
+.restaurant-card {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 12px 1px #a1a1a1;
+}
+.restaurant-card__figure figcaption {
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: bold;
+  position: absolute;
+  padding: 10px 15px;
+  top: 5%;
+  right: 5%;
+}
+.restaurant-card:hover {
+  box-shadow: 10px 10px 12px 1px #a1a1a1;
+  filter: brightness(110%);
+}
+
+.restaurant-info {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px 15px 15px;
+  border-radius: 20px;
+}
+.restaurant-info span {
+  padding-top: 5px;
+}
+.restaurant-info p {
+  font-weight: lighter;
+}
+
+.fa-heart {
+  font-size: 2em;
+  color: transparent;
+  -webkit-text-stroke: 2px black;
+  opacity: 0.2;
+}
+.fa-heart:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 0px;
+  opacity: 1;
+  transition: all 1000ms ease-in-out;
+}
+
 #left {
   grid-column-start: 2;
+}
+
+footer {
+  background-color: #353535;
+}
+footer h2 {
+  font-family: "Shrikhand";
+  text-align: left;
+  font-size: 1.5rem;
+  padding-top: 10px;
+  padding-left: 15px;
+}
+footer h2 a {
+  color: white;
+}
+footer ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 20px 40px;
+  margin: 0 30px;
+}
+footer ul li a {
+  color: white;
+}
+footer ul li a i {
+  padding: 0 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
