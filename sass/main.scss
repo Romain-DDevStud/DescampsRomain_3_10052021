@@ -323,9 +323,14 @@ footer {
             display: flex;
             justify-content: space-between;
             width: 100%;
+            height: 10vh;
             background-color: white;
-            padding: 15px 0 15px 15px;
+            padding-left: 15px;
             border-radius: 15px;
+            cursor: pointer;
+            .article__item {
+                align-self: center;
+            }
             p {
                 display: flex;
                 align-items: center;
@@ -336,17 +341,38 @@ footer {
     }
 }
 .article__check {
-    display: none;
-    width: 10%;
-    height: 100%;
     border-bottom-right-radius: 15px;
     border-top-right-radius: 15px;
+    display: flex;
+    align-items: $align;
+    justify-content: $align;
+    background-color: $color-tertiary;
+    width: 15%;
+    display: none;
     i {
-        padding-top: 10px;
         font-size: 1.5rem;
         color: #fff;
-        transform: rotate(360deg);
+        transform: rotate(0);
+        transition: transform 600ms ease-in-out;
     }
+}
+.section__article:hover .article__check {
+    display: flex;
+    text-align: $align;
+    justify-content: $align;
+    transform: translateX(0);
+    animation: widthgrow 800ms forwards;
+    @keyframes widthgrow {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 15%;
+        }
+    }
+}
+.section__article:hover .article__check > i {
+    transform: rotate(1turn);
 }
 .restaurant__items > h3 {
     font-weight: lighter;
@@ -357,5 +383,27 @@ footer {
         padding-top: 4px;
         margin-bottom: 10px;
         width: 2vw;
+    }
+}
+#margin-bot {
+    margin-bottom: 35px;
+}
+#anim-entrées {
+    animation: menu 800ms ease-in-out both;
+}
+#anim-plats {
+    animation: menu 800ms 800ms ease-in-out both;
+}
+#anim-desserts {
+    animation: menu 800ms 1600ms ease-in-out both;
+}
+@keyframes menu {
+    0% {
+        opacity: 0;
+        transform: translateY(3em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0em);
     }
 }
