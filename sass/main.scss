@@ -288,17 +288,22 @@ footer {
     display: flex;
     justify-content: $align;
     align-items: $align;
-    animation: disappear 3000ms ease-out;
+    animation: disappear 3000ms forwards;
     @keyframes disappear {
         0% {
             opacity: 1;
+            visibility: visible;
+        }
+        50% {
+            opacity: 0.5;
         }
         100% {
             opacity: 0;
+            visibility: hidden;
         }
     }
     &__spin {
-        animation: spin 3000ms linear infinite;
+        animation: spin 2500ms linear infinite;
         transform-origin: bottom;
     }
     @keyframes spin {
@@ -309,7 +314,41 @@ footer {
             transform: rotate(360deg);
         }
     }
+    &__container {
+        position: relative;
+    }
+    &__circle {
+        position: absolute;
+        border-radius: 100%;
+        border: 8px double transparent;
+        background-image: linear-gradient(white, white), radial-gradient(circle at top left, white, $color-secondary, $color-primary);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+        width: 100px;
+        height: 100px;
+        top: 37%;
+        left: 20%;
+        animation: reverse-spin 3000ms linear infinite;
+        @keyframes reverse-spin {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(-1turn);
+            }
+        }
+    }
+    &__ustensils {
+        position: absolute;
+        left: 35%;
+        top: 69%;
+        img {
+            height: 55px;
+            width: 100%;
+        }
+    }
 }
+
 /* Page restaurant */
 
 .restaurant__header > a {
@@ -386,10 +425,15 @@ footer {
             overflow: hidden;
             &:hover {
                 box-shadow: 10px 10px 12px 1px #a1a1a1;
-                /*filter: brightness(110%);*/
             }
             .article__item {
                 align-self: center;
+                &:hover {
+                    max-width: 85%;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
             }
             p {
                 display: flex;

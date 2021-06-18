@@ -318,18 +318,23 @@ footer ul li a i {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: disappear 3000ms ease-out;
+  animation: disappear 3000ms forwards;
 }
 @keyframes disappear {
   0% {
     opacity: 1;
+    visibility: visible;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
     opacity: 0;
+    visibility: hidden;
   }
 }
 .loader__spin {
-  animation: spin 3000ms linear infinite;
+  animation: spin 2500ms linear infinite;
   transform-origin: bottom;
 }
 @keyframes spin {
@@ -339,6 +344,39 @@ footer ul li a i {
   100% {
     transform: rotate(360deg);
   }
+}
+.loader__container {
+  position: relative;
+}
+.loader__circle {
+  position: absolute;
+  border-radius: 100%;
+  border: 8px double transparent;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, white, #FF79DA, #9356DC);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  width: 100px;
+  height: 100px;
+  top: 37%;
+  left: 20%;
+  animation: reverse-spin 3000ms linear infinite;
+}
+@keyframes reverse-spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-1turn);
+  }
+}
+.loader__ustensils {
+  position: absolute;
+  left: 35%;
+  top: 69%;
+}
+.loader__ustensils img {
+  height: 55px;
+  width: 100%;
 }
 
 /* Page restaurant */
@@ -425,10 +463,15 @@ footer ul li a i {
 }
 .restaurant__items article:hover {
   box-shadow: 10px 10px 12px 1px #a1a1a1;
-  /*filter: brightness(110%);*/
 }
 .restaurant__items article .article__item {
   align-self: center;
+}
+.restaurant__items article .article__item:hover {
+  max-width: 85%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .restaurant__items article p {
   display: flex;
