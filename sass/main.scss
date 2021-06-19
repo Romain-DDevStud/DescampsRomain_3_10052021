@@ -222,7 +222,6 @@ a {
     &:hover {
         background:linear-gradient(#FF79DA, #9356DC);
         -webkit-background-clip: text;
-        background-clip: text;
         -webkit-text-stroke: 0px;
         opacity:1;
         transition: all 1000ms ease-in-out;
