@@ -344,7 +344,7 @@ footer {
         top: 69%;
         img {
             height: 55px;
-            width: 100%;
+            width: 45px;
         }
     }
 }
@@ -354,7 +354,7 @@ footer {
 .restaurant__header > a {
    position: absolute;
    left: 5%;
-   top: 4%;
+   top: 3%;
    @media (max-width:1024px) {
        top: 3%;
    }

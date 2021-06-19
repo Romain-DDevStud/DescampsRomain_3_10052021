@@ -376,14 +376,14 @@ footer ul li a i {
 }
 .loader__ustensils img {
   height: 55px;
-  width: 100%;
+  width: 45px;
 }
 
 /* Page restaurant */
 .restaurant__header > a {
   position: absolute;
   left: 5%;
-  top: 4%;
+  top: 3%;
 }
 @media (max-width: 1024px) {
   .restaurant__header > a {
