@@ -254,11 +254,11 @@ a {
   transition: all 1000ms ease-in-out;
 }
 
-#left {
+.left {
   grid-column-start: 2;
 }
 @media (max-width: 767px) {
-  #left {
+  .left {
     grid-column-start: 1;
   }
 }
