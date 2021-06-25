@@ -652,15 +652,15 @@ footer ul li a i {
   margin-bottom: 35px;
 }
 
-#anim-entrées {
+.anim-entrées {
   animation: menu 800ms ease-in-out both;
 }
 
-#anim-plats {
+.anim-plats {
   animation: menu 800ms 800ms ease-in-out both;
 }
 
-#anim-desserts {
+.anim-desserts {
   animation: menu 800ms 1600ms ease-in-out both;
 }
 
